@@ -1,0 +1,11 @@
+{
+  "name": "chatdir",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/blindbane/chatdir.git",
+  "author": "Aidan Bane <aidanfbane@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cd client && yarn start"
+  }
+}
