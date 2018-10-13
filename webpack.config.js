@@ -34,6 +34,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'public/'),
     port: 3000,
     publicPath: 'http://localhost:3000/dist/',
+    hot: true,
   },
   output: {
     path: path.resolve(__dirname, 'dist/'),

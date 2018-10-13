@@ -1,7 +1,6 @@
 {
   "name": "chatdir",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/blindbane/chatdir.git",
   "author": "Aidan Bane <aidanfbane@gmail.com>",
   "license": "MIT",
@@ -14,7 +13,7 @@
     "test:coverage": "yarn test --coverage",
     "test:update": "yarn test --updateSnapshot",
     "build": "webpack",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --hot --open"
   },
   "husky": {
     "hooks": {
@@ -30,7 +29,8 @@
   },
   "dependencies": {
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-hot-loader": "^4.3.11"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
