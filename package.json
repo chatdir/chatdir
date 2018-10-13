@@ -12,7 +12,7 @@
     "test": "jest",
     "test:watch": "yarn test --watch",
     "test:coverage": "yarn test --coverage",
-    "test:update": "yarn test -u"
+    "test:update": "yarn test --updateSnapshot"
   },
   "dependencies": {
     "react": "^16.5.2",
