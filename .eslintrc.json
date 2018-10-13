@@ -21,8 +21,9 @@
     "eslint-plugin-jsx-a11y"
   ],
   "env": {
+    "browser": true,
     "es6": true,
-    "browser": true
+    "jest": true
   },
   "rules": {
     "react/prop-types": 0

@@ -8,7 +8,9 @@
   "scripts": {
     "format": "prettier --write \"src/**.{js,jsx}\"",
     "format:check": "prettier -l \"src/**.{js,jsx}\"",
-    "lint": "eslint \"**/*.{js,jsx}\""
+    "lint": "eslint \"**/*.{js,jsx}\"",
+    "test": "jest",
+    "test:update": "yarn test -u"
   },
   "dependencies": {
     "react": "^16.5.2",
@@ -26,6 +28,8 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
-    "prettier": "1.14.3"
+    "jest": "^23.6.0",
+    "prettier": "1.14.3",
+    "react-test-renderer": "^16.5.2"
   }
 }
