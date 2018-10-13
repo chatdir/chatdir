@@ -5,5 +5,11 @@ exports[`App snapshot 1`] = `
   className="AppClass"
 >
   Hello, world!
+  <div>
+    <img
+      alt="example chat on a phone"
+      src="test-file-stub"
+    />
+  </div>
 </div>
 `;
