@@ -10,6 +10,7 @@
     "format:check": "prettier -l \"src/**.{js,jsx}\"",
     "lint": "eslint \"**/*.{js,jsx}\"",
     "test": "jest",
+    "test:watch": "yarn test --watch",
     "test:update": "yarn test -u"
   },
   "dependencies": {
