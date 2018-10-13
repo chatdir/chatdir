@@ -10,7 +10,10 @@
     "format:check": "prettier -l \"src/**.{js,jsx}\"",
     "lint": "eslint \"**/*.{js,jsx}\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.7.0",
