@@ -11,6 +11,7 @@
     "lint": "eslint \"**/*.{js,jsx}\"",
     "test": "jest",
     "test:watch": "yarn test --watch",
+    "test:coverage": "yarn test --coverage",
     "test:update": "yarn test -u"
   },
   "dependencies": {
