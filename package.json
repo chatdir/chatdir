@@ -12,8 +12,10 @@
     "test:watch": "yarn test --watch",
     "test:coverage": "yarn test --coverage",
     "test:update": "yarn test --updateSnapshot",
-    "build": "webpack",
-    "start": "webpack-dev-server --hot --open"
+    "build": "webpack --env.mode production",
+    "build:analyze": "yarn build --env.presets analyze",
+    "build:compress": "yarn build --env.presets compress",
+    "start": "webpack-dev-server --hot --open --env.mode development"
   },
   "husky": {
     "hooks": {
@@ -43,6 +45,7 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^0.1.19",
+    "compression-webpack-plugin": "^2.0.0",
     "css-loader": "^1.0.0",
     "eslint": "^5.7.0",
     "eslint-config-prettier": "^3.1.0",
@@ -55,12 +58,16 @@
     "husky": "^1.1.2",
     "jest": "^23.6.0",
     "lint-staged": "^7.3.0",
+    "mini-css-extract-plugin": "^0.4.4",
     "prettier": "1.14.3",
     "react-test-renderer": "^16.5.2",
     "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
     "webpack": "^4.20.2",
+    "webpack-bundle-analyzer": "^3.0.2",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.4"
   },
   "jest": {
     "moduleNameMapper": {
