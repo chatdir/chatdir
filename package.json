@@ -1,6 +1,7 @@
 {
   "name": "chatdir",
   "version": "1.0.0",
+  "engines" : { "node" : ">=10.12.0" },
   "repository": "https://github.com/blindbane/chatdir.git",
   "author": "Aidan Bane <aidanfbane@gmail.com>",
   "license": "MIT",
