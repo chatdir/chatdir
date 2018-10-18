@@ -9,10 +9,11 @@
     "format": "prettier --write \"src/**.{js,jsx}\"",
     "format:check": "prettier -l \"src/**.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
-    "test": "jest",
-    "test:watch": "yarn test --watch",
-    "test:coverage": "yarn test --coverage",
-    "test:update": "yarn test --updateSnapshot",
+    "test": "yarn test:unit && yarn test:coverage",
+    "test:unit": "jest",
+    "test:watch": "yarn test:unit --watch",
+    "test:coverage": "yarn test:unit --coverage",
+    "test:update": "yarn test:unit --updateSnapshot",
     "build": "webpack --env.mode production",
     "build:analyze": "yarn build --env.presets analyze",
     "build:compress": "yarn build --env.presets compress",
@@ -69,11 +70,5 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9",
     "webpack-merge": "^4.1.4"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.css$": "<rootDir>/__mocks__/styleMock.js"
-    }
   }
 }
