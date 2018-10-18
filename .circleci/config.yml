@@ -2,10 +2,9 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-
 version: 2
 jobs:
-  build:
+  test:
     docker:
       - image: circleci/node:10.12.0
     working_directory: ~/repo
@@ -20,18 +19,30 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run:
-          name: "JavaScript Test Suite"
-          environment:
-            JEST_JUNIT_OUTPUT_DIR: coverage/junit/jest
-          command: yarn test --ci --reporters=default --reporters="jest-junit"
-      - store_test_results:
-          path: coverage/junit
-      - store_artifacts:
-          path: coverage/junit
-          workflows:
+      # run tests!
+      - run: yarn test
+  lint:
+    docker:
+      - image: circleci/node:10.12.0
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      # run tests!
+      - run: yarn lint --format junit -o coverage/junit/eslint/eslint-results.xml
+
 workflows:
   version: 2
-  build_and_test:
+  test_and_lint:
     jobs:
-      - build
+      - test
+      - lint:
+          requires:
+            - test
