@@ -29,3 +29,9 @@ jobs:
           path: coverage/junit
       - store_artifacts:
           path: coverage/junit
+          workflows:
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
