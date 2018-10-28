@@ -1,6 +1,14 @@
+const path = require('path')
+
 module.exports = () => ({
   mode: 'development',
   devtool: 'inline-source-map',
+  devServer: {
+    contentBase: path.join(__dirname, '../dist'),
+    port: 1337,
+    historyApiFallback: true,
+    open: true,
+  },
   module: {
     rules: [
       {

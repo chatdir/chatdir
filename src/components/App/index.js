@@ -1,20 +1,25 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { hot } from 'react-hot-loader'
-import styles from './App.css'
-import PhoneText from './img/phoneText.jpg'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Nav from '../Nav'
+import Home from '../Home'
+import Chat from '../Chat'
+import Settings from '../Settings'
 
 class App extends Component {
-  state = {}
   render() {
     return (
-      <div className={styles.appClass}>
-        <div className={styles.appClass}>Hello World!</div>
-        <div className={styles.abc}>Hello World!</div>
-        <div className={styles.abcd}>Hello World!</div>
-        <div>
-          <img src={PhoneText} alt="example chat on a phone" />
-        </div>
-      </div>
+      <Router>
+        <Fragment>
+          <Nav />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/chat" component={Chat} />
+            <Route path="/settings" component={Settings} />
+            <Route component={Home} />
+          </Switch>
+        </Fragment>
+      </Router>
     )
   }
 }

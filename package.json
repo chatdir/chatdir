@@ -18,7 +18,7 @@
     "build": "webpack --env.mode production",
     "build:analyze": "yarn build --env.presets analyze",
     "build:compress": "yarn build --env.presets compress",
-    "start": "webpack-dev-server --hot --open --env.mode development"
+    "start": "webpack-dev-server --hot --env.mode development"
   },
   "husky": {
     "hooks": {
