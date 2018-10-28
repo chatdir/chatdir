@@ -1,6 +1,6 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
-import App from '../src/App'
+import App from '../src/components/App'
 
 describe('App', () => {
   test('snapshot', () => {
