@@ -1,4 +1,4 @@
-# chatdir &middot; [![CircleCI Status](https://circleci.com/gh/blindbane/chatdir/tree/master.svg?style=svg&circle-token=:circle-token)](https://circleci.com/gh/blindbane/chatdir/tree/master)
+# chatdir &middot; [![CircleCI](https://circleci.com/gh/chatdir/chatdir.svg?style=svg)](https://circleci.com/gh/chatdir/chatdir)
 
 a chat app
 
