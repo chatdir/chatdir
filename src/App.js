@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { hot } from 'react-hot-loader'
-import './App.css'
+import styles from './App.css'
 import PhoneText from './img/phoneText.jpg'
 
 class App extends Component {
   state = {}
   render() {
     return (
-      <div className="AppClass">
-        Hello, world!
+      <div className={styles.appClass}>
+        <div className={styles.appClass}>Hello World!</div>
+        <div className={styles.abc}>Hello World!</div>
+        <div className={styles.abcd}>Hello World!</div>
         <div>
           <img src={PhoneText} alt="example chat on a phone" />
         </div>
