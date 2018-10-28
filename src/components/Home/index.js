@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { hot } from 'react-hot-loader'
-import styles from './App.css'
+import styles from './Home.css'
 import PhoneText from './img/phoneText.jpg'
 
-class App extends Component {
-  state = {}
+class Home extends Component {
   render() {
     return (
       <div className={styles.appClass}>
@@ -19,4 +18,4 @@ class App extends Component {
   }
 }
 
-export default hot(module)(App)
+export default hot(module)(Home)
