@@ -7,12 +7,23 @@ module.exports = () => ({
     contentBase: path.join(__dirname, '../dist'),
     port: 1337,
     historyApiFallback: true,
+    overlay: true,
     open: true,
   },
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          quiet: true,
+        },
+      },
+      {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: [
           'style-loader',
           {
